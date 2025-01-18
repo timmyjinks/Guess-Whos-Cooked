@@ -3,15 +3,30 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-  Button guess;
-  Button endTurn;
-  Dropdown question;
+  public bool isGuessClicked;
+  public bool isEndTurnClicked;
+  public string questionValue;
 
   void Start() {
-    Button button = Instantiate(guess);
-    button.transform.SetParent(transform);
+    isGuessClicked = false;
+    isEndTurnClicked = false;
+    questionValue = "dark hair";
+  }
 
-    button = Instantiate(endTurn);
-    button.transform.SetParent(transform);
+  public void guessButton() {
+    isGuessClicked = true;
+  }
+
+  public void endTurnButton() {
+    isEndTurnClicked = true;
+  }
+
+  public void onChange(int index) {
+    switch (index) { 
+      case 0: questionValue = "dark hair"; break;
+      case 1: questionValue = "green eyes"; break;
+    }
+    Debug.Log(index);
+    Debug.Log(questionValue);
   }
 }
