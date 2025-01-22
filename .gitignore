@@ -28,5 +28,6 @@ crashlytics-build.properties
 Thumbs.db
 desktop.ini
 
-.vsconfig
+.vsconfig/
+.vs/
 UserSettings/
