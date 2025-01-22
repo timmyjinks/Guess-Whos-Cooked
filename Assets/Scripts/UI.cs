@@ -10,7 +10,7 @@ public class UI : MonoBehaviour
   void Start() {
     isGuessClicked = false;
     isEndTurnClicked = false;
-    questionValue = "dark hair";
+    questionValue = "black hair";
   }
 
   public void guessButton() {
@@ -23,10 +23,8 @@ public class UI : MonoBehaviour
 
   public void onChange(int index) {
     switch (index) { 
-      case 0: questionValue = "dark hair"; break;
+      case 0: questionValue = "black hair"; break;
       case 1: questionValue = "green eyes"; break;
     }
-    Debug.Log(index);
-    Debug.Log(questionValue);
   }
 }
