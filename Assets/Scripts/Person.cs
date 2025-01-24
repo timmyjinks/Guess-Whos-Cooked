@@ -9,6 +9,7 @@ public class Person
   public string hair;
   public string eyes;
   public string image;
+    public HairColor hairColor = HairColor.Blonde;
 
   public Person(GameObject person, string hair, string eyes, Vector3 position) {
     this.person = person;
