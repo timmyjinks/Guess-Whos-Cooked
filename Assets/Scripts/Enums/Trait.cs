@@ -1,0 +1,32 @@
+using UnityEngine;
+
+public enum Trait
+{
+    NoFacialHair,
+    Beard,
+    Mustache,
+    Goatee,
+    Male,
+    Female,
+    Glasses,
+    NoGlasses,
+    BlackHair,
+    BrownHair,
+    GreyHair,
+    BlondeHair,
+    WhiteHair,
+    Short,
+    Long,
+    Bald,
+    RedShirt,
+    BlackShirt,
+    BlueShirt,
+    YellowShirt,
+    GreenShirt,
+    WhiteShirt,
+    GreyShirt,
+    PinkShirt,
+    BrownShirt,
+    WhiteSkin,
+    NotWhiteSkin,
+}

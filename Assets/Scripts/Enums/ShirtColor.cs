@@ -9,5 +9,6 @@ public enum ShirtColor
     Green,
     White,
     Grey,
-    Pink
+    Pink,
+    Brown,
 }

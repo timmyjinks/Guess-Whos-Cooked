@@ -6,5 +6,5 @@ public enum HairColor
     Brown,
     Grey,
     Blonde,
-    Bald
+    White,
 }
