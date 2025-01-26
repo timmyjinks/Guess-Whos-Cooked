@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => ui.isEndTurnClicked);
     }
 
-    void hidePeople(string question, List<Person> board, bool response) {
+    public void hidePeople(string question, List<Person> board, bool response) {
       for(int i = 0; i < 24; i++) {
         if (response) {
           if (!board[i].checkTraits(question)) {
