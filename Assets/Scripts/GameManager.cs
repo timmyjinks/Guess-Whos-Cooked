@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
           secret1.glasses,
           secret1.shirtColor,
           secret1.skinColor,
-          new Vector3(126.9F, 16.4F, 10)
+          new Vector3(125, 14, 10)
       );
       player2.secret = new Person(player2Prefab, 
           secret2.name, 
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
           secret2.glasses,
           secret2.shirtColor,
           secret2.skinColor,
-          new Vector3(-106.9F, 16.4F, 10)
+          new Vector3(-75, 14, 10)
       );
 
 
@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
     }
 
     void populateBoard(List<Person> board, Transform boardParent, float x, float y) {
-      float begin = x - 28.33F;
+      float begin = x - 30;
       for(int i = 0; i < 24; i++) {
         if (i % 6 == 0) {
           y -= 6;

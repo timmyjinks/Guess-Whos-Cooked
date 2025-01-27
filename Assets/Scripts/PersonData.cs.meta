@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - aaronReed: {fileID: 188050, guid: b06f0e6c1dfa4356ac918da1bb32c603, type: 3}
+  - aaronReed: {instanceID: 0}
   - bjVoorhees: {instanceID: 0}
   - brettBeardall: {instanceID: 0}
   - camPeterson: {instanceID: 0}

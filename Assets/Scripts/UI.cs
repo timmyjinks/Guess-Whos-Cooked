@@ -35,6 +35,10 @@ public class UI : MonoBehaviour
       case 9: questionValue = Trait.Beard; break;
       case 10: questionValue = Trait.NoFacialHair; break;
       case 11: questionValue = Trait.Goatee; break;
+      case 12: questionValue = Trait.BlackShirt; break;
+      case 13: questionValue = Trait.WhiteShirt; break;
+      case 14: questionValue = Trait.GreenShirt; break;
+      case 15: questionValue = Trait.PinkShirt; break;
     }
   }
   public void onChangeAnswer(int index) {

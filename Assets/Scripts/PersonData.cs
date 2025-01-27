@@ -247,6 +247,7 @@ public class PersonData : MonoBehaviour
   };
 
   void Start() {
+    Debug.Log("adding");
     personObjects.Add(aaronReed);
     personObjects.Add(bjVoorhees);
     personObjects.Add(brettBeardall);
