@@ -1,17 +1,18 @@
 using System.Collections;
+using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject personPrefab;
     public GameObject cookedPrefab;
     public Camera MainCamera;
     public UI ui;
     public Transform board1Transform;
     public Transform board2Transform;
     public TMP_Text objectName;
+    public GameObject Timer;
 
     public int playerTurn;
 
@@ -20,20 +21,22 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+      Timer.SetActive(false);
       Person player1secret;
       Person player2secret;
       string player1name = "Player 1";
       string player2name = "Player 2";
+      Debug.Log("test");
 
 
-      if (board1.Count > 1 || board2.Count > 1) {
-        for (int i = 0; i < 24; i++) {
-          Destroy(board1[i].person);
-          Destroy(board2[i].person);
-        }
-        board1 = new List<Person>();
-        board2 = new List<Person>();
-      }
+      // if (board1.Count > 1 || board2.Count > 1) {
+      //   for (int i = 0; i < 24; i++) {
+      //     Destroy(board1[i].person);
+      //     Destroy(board2[i].person);
+      //   }
+      //   board1 = new List<Person>();
+      //   board2 = new List<Person>();
+      // }
 
       MainCamera = Camera.main;
       MainCamera.enabled = true;
@@ -77,6 +80,7 @@ public class GameManager : MonoBehaviour
       StartCoroutine(StartGame());
       IEnumerator StartGame() {
         while (true) {
+          Timer.SetActive(false);
           if (playerTurn == 1) {
             yield return playTurn(board1, board1Transform, player2secret, player1name);
             playerTurn = 2;
@@ -86,6 +90,8 @@ public class GameManager : MonoBehaviour
           }
           ui.isGuessClicked = false;
           ui.isEndTurnClicked = false;
+          Timer.SetActive(true);
+          yield return new WaitForSeconds(5);
         }
       }
 
@@ -97,14 +103,13 @@ public class GameManager : MonoBehaviour
           yield return new WaitUntil(() => ui.isEndTurnClicked);
           if (ui.answerValue != "" && opponentSecret.name == ui.answerValue) {
             Debug.Log(playerName + "Wins");
-          // Go to start screen
+            SceneManager.LoadScene("MainMenu");
           } else if (ui.answerValue != "" && opponentSecret.name != ui.answerValue) {
             Debug.Log(playerName + " Loses");
-          // Go to start screen
+            SceneManager.LoadScene("MainMenu");
           }
       }
     }
-
 
     public void hidePeople(string question, List<Person> board, bool response) {
       for(int i = 0; i < 24; i++) {

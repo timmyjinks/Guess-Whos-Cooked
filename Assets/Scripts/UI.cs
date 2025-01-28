@@ -11,6 +11,7 @@ public class UI : MonoBehaviour
   void Start() {
     isGuessClicked = false;
     isEndTurnClicked = false;
+    questionValue = "brown hair";
   }
 
   public void guessButton() {
@@ -43,6 +44,7 @@ public class UI : MonoBehaviour
       case 17: questionValue = "red shirt"; break;
       case 18: questionValue = "grey shirt"; break;
     }
+    Debug.Log(questionValue);
   }
   public void onChangeAnswer(int index) {
     switch (index) { 
@@ -72,6 +74,5 @@ public class UI : MonoBehaviour
       case 23: answerValue = "Sarah Carter"; break;
       case 24: answerValue = "Tiffany Hippie"; break;
     }
-    Debug.Log(answerValue);
   }
 }
