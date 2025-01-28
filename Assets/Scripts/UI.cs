@@ -5,7 +5,7 @@ public class UI : MonoBehaviour
 {
   public bool isGuessClicked;
   public bool isEndTurnClicked;
-  public Trait questionValue;
+  public string questionValue;
   public string answerValue;
 
   void Start() {
@@ -23,24 +23,25 @@ public class UI : MonoBehaviour
 
   public void onChangeQuestion(int index) {
     switch (index) { 
-      case 0: questionValue = Trait.BlackHair; break;
-      case 1: questionValue = Trait.BrownHair; break;
-      case 2: questionValue = Trait.BlondeHair; break;
-      case 3: questionValue = Trait.Long; break;
-      case 4: questionValue = Trait.Short; break;
-      case 5: questionValue = Trait.Bald; break;
-      case 6: questionValue = Trait.Male; break;
-      case 7: questionValue = Trait.Female; break;
-      case 8: questionValue = Trait.Glasses; break;
-      case 9: questionValue = Trait.Beard; break;
-      case 10: questionValue = Trait.NoFacialHair; break;
-      case 11: questionValue = Trait.Goatee; break;
-      case 12: questionValue = Trait.BlackShirt; break;
-      case 13: questionValue = Trait.WhiteShirt; break;
-      case 14: questionValue = Trait.GreenShirt; break;
-      case 15: questionValue = Trait.PinkShirt; break;
-      case 16: questionValue = Trait.BlueShirt; break;
-      case 17: questionValue = Trait.RedShirt; break;
+      case 0: questionValue = "black hair"; break;
+      case 1: questionValue = "brown hair"; break;
+      case 2: questionValue = "blonde hair"; break;
+      case 3: questionValue = "long hair"; break;
+      case 4: questionValue = "short hair"; break;
+      case 5: questionValue = "bald"; break;
+      case 6: questionValue = "male"; break;
+      case 7: questionValue = "female"; break;
+      case 8: questionValue = "glasses"; break;
+      case 9: questionValue = "beard"; break;
+      case 10: questionValue = "no facial hair"; break;
+      case 11: questionValue = "goatee"; break;
+      case 12: questionValue = "black shirt"; break;
+      case 13: questionValue = "white shirt"; break;
+      case 14: questionValue = "green shirt"; break;
+      case 15: questionValue = "pink shirt"; break;
+      case 16: questionValue = "blue shirt"; break;
+      case 17: questionValue = "red shirt"; break;
+      case 18: questionValue = "grey shirt"; break;
     }
   }
   public void onChangeAnswer(int index) {

@@ -7,25 +7,23 @@ public class Person
 {
   public GameObject person;
   public string name;
-  public Trait hairColor;
-  public Trait hairLength;
-  public Trait facialHair;
-  // public EyeColor eyeColor;
-  public Trait gender;
-  public Trait glasses;
-  public Trait shirtColor;
-  // public ShirtType shirtType;
-  public Trait skinColor;
+  public string hairColor;
+  public string hairLength;
+  public string facialHair;
+  public string gender;
+  public string glasses;
+  public string shirtColor;
+  public string skinColor;
 
   public Person(GameObject person, 
       string name, 
-      Trait hairColor,
-      Trait hairLength,
-      Trait facialHair,
-      Trait gender, 
-      Trait glasses,
-      Trait shirtColor,
-      Trait skinColor,
+      string hairColor,
+      string hairLength,
+      string facialHair,
+      string gender, 
+      string glasses,
+      string shirtColor,
+      string skinColor,
       Vector3 position) {
     this.person = person;
     this.name = name;
@@ -39,7 +37,7 @@ public class Person
     this.person.transform.position = position;
   }
 
-  public bool checkTraits(Trait question) {
+  public bool checkTraits(string question) {
     return question == hairColor || 
       question == hairLength ||
       question == facialHair ||
