@@ -39,6 +39,8 @@ public class UI : MonoBehaviour
       case 13: questionValue = Trait.WhiteShirt; break;
       case 14: questionValue = Trait.GreenShirt; break;
       case 15: questionValue = Trait.PinkShirt; break;
+      case 16: questionValue = Trait.BlueShirt; break;
+      case 17: questionValue = Trait.RedShirt; break;
     }
   }
   public void onChangeAnswer(int index) {
@@ -54,20 +56,21 @@ public class UI : MonoBehaviour
       case 8: answerValue = "Eric Kholer"; break;
       case 9: answerValue = "Janet Head Parish"; break;
       case 10: answerValue = "Joe Shull"; break;
-      case 12: answerValue = "Josh Krebs"; break;
+      case 11: answerValue = "Josh Krebs"; break;
+      case 12: answerValue = "Kirk Marshall"; break;
       case 13: answerValue = "Kasie Hadley"; break;
-      case 14: answerValue = "Kirk Marshall"; break;
-      case 15: answerValue = "Matt Brown"; break;
-      case 16: answerValue = "Melissa Nelson"; break;
-      case 17: answerValue = "Mercedes Wiles"; break;
-      case 18: answerValue = "Michael Pritchard"; break;
-      case 19: answerValue = "Omkar Terse"; break;
-      case 20: answerValue = "Paul Fox"; break;
-      case 21: answerValue = "Raymond Maple"; break;
-      case 22: answerValue = "Rene Guzman"; break;
-      case 23: answerValue = "Ryan Cox"; break;
-      case 24: answerValue = "Sarah Carter"; break;
-      case 25: answerValue = "Tiffany Hippie"; break;
+      case 14: answerValue = "Matt Brown"; break;
+      case 15: answerValue = "Melissa Nelson"; break;
+      case 16: answerValue = "Mercedes Wiles"; break;
+      case 17: answerValue = "Michael Pritchard"; break;
+      case 18: answerValue = "Omkar Terse"; break;
+      case 19: answerValue = "Paul Fox"; break;
+      case 20: answerValue = "Raymond Maple"; break;
+      case 21: answerValue = "Rene Guzman"; break;
+      case 22: answerValue = "Ryan Cox"; break;
+      case 23: answerValue = "Sarah Carter"; break;
+      case 24: answerValue = "Tiffany Hippie"; break;
     }
+    Debug.Log(answerValue);
   }
 }
